@@ -11,7 +11,7 @@
                 // Respond with a message including this clients' id sent from the server
                 socket.emit('i am client', {data: 'foo!', id: data.id});
             });
-            socket.on('time', function(data) {
+            socket.on('message', function(data) {
                 addMessage(data.time);
             });
             socket.on('error', console.error.bind(console));
