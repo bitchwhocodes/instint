@@ -8,7 +8,7 @@ var app = http.createServer(function (req, res) {
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.end(index);
 });
-app.listen(3000);
+app.listen(process.env.port);
 // Socket.io server listens to our app
 var io = require('socket.io').listen(app);
 
