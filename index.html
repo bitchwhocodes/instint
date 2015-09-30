@@ -12,7 +12,7 @@
                 socket.emit('i am client', {data: 'foo!', id: data.id});
             });
             socket.on('message', function(data) {
-                addMessage(data.time);
+                addMessage(data.msg);
             });
             socket.on('error', console.error.bind(console));
             socket.on('message', console.log.bind(console));
